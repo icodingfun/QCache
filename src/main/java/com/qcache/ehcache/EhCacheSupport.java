@@ -35,7 +35,7 @@ public class EhCacheSupport implements ICache {
 	}
 
 	private CacheManager cacheManager;
-	private volatile Cache defaultCache;
+	private Cache defaultCache;
 	private SingleWork singleWork;
 
 	@SuppressWarnings("unchecked")

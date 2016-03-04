@@ -14,7 +14,7 @@
 	</cache>
 
 	<!-- transactionalMode="local" copyOnRead="true" copyOnWrite="true" -->
-	<cache name="cocoons-cache" maxBytesLocalHeap="10M">
+	<cache name="qcache" maxBytesLocalHeap="10M">
 		<!-- <searchable keys="false" values="false" /> -->
 		<searchable values="false" />
 	</cache>

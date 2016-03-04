@@ -27,4 +27,8 @@ public class UserService {
 			return (T) userMapper.getUser(userId);
 		} , callback);
 	}
+
+	public User getUser2(Integer id) {
+		return userMapper.getUser(id);
+	}
 }

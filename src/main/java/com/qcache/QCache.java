@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
+import java.util.concurrent.TimeUnit;
 import java.util.function.Consumer;
 import java.util.function.Function;
 
@@ -40,7 +41,7 @@ public class QCache {
 				while (saving) {
 					QCache.this.saveCache();
 					try {
-						Thread.sleep(60 * 1000L);
+						TimeUnit.MINUTES.sleep(5);// 5 min
 					} catch (Exception e) {
 						e.printStackTrace();
 					}
