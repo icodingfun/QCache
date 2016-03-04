@@ -1,6 +1,7 @@
 package com.qcache.example.db.model;
 
 import com.qcache.entity.Entity;
+import com.qcache.example.db.DBHelper;
 
 public class User extends Entity {
 	private int id;
