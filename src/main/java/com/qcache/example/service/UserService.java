@@ -23,7 +23,7 @@ public class UserService {
 	}
 
 	public <T> void getUser(Integer userId, Consumer<T> callback) {
-		cache.get(userId, (key) -> {
+		cache.getAsync(userId, (key) -> {
 			return (T) userMapper.getUser(userId);
 		} , callback);
 	}

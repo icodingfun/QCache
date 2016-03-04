@@ -73,7 +73,15 @@ public class QCache {
 		cache.put(key, value);
 	}
 
-	public <T> void get(Object key, Function<Object, T> ifAbsent, Consumer<T> callback) {
+	public <T> T get(Object key, Function<Object, T> ifAbsent) {
+		T value = get(key);
+		if (value != null) {
+			return value;
+		}
+		return cache.get(key, ifAbsent);
+	}
+
+	public <T> void getAsync(Object key, Function<Object, T> ifAbsent, Consumer<T> callback) {
 		T value = get(key);
 		if (value != null) { // cache hit
 			callback.accept(value);
