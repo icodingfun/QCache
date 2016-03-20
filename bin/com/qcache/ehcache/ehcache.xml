@@ -1,0 +1,21 @@
+<ehcache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="http://ehcache.org/ehcache.xsd">
+	<diskStore path="java.io.tmpdir" />
+	<defaultCache maxEntriesLocalHeap="10000" eternal="false"
+		timeToIdleSeconds="120" timeToLiveSeconds="120" maxEntriesLocalDisk="10000000"
+		diskExpiryThreadIntervalSeconds="120" memoryStoreEvictionPolicy="LRU">
+		<persistence strategy="localTempSwap" />
+	</defaultCache>
+
+	<cache name="hello-world" maxBytesLocalHeap="10M" copyOnRead="true"
+		copyOnWrite="true" transactionalMode="local">
+		<!-- <searchable keys="false" values="false" /> -->
+		<searchable values="false" />
+	</cache>
+
+	<!-- transactionalMode="local" copyOnRead="true" copyOnWrite="true" -->
+	<cache name="cocoons-cache" maxBytesLocalHeap="10M">
+		<!-- <searchable keys="false" values="false" /> -->
+		<searchable values="false" />
+	</cache>
+</ehcache>
